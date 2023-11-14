@@ -22,6 +22,7 @@ import pandas as pd
 import pymc as pm
 import matplotlib.pyplot as pl
 
+
 def count_onehot_pairs(onehot_df):
     """
     Count the number of occurences of each binary pair.
