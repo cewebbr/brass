@@ -1,28 +1,48 @@
-# Category association estimator
+# BRASS - Categorical variable association estimator
 
-_README under construction. It should be ready before the paper is accepted._
+BRASS is a Bayesian method for estimating the degree of association between categorical variables. It is described in the paper 
+"_Applying a new category association estimator to sentiment analysis on the Web_" ([Xavier et al. (2023)](https://arxiv.org/abs/2311.05330)),
+where it was applied to annotations of emotions identified on tweets in Portuguese.
 
-## Estrutura do projeto:
+## Structure of the project:
 
     .
     ├── README.md               <- This document
-    ├── requirements.txt        <- Principais pacotes de python necessários
-    ├── dados                   <- Diretório com os dados utilizados
-    |   ├── brutos              <- Dados brutos, originais
-    |   ├── limpos              <- Dados limpos, corrigidos, padronizados
-    |   └── processados         <- Dados derivados dos limpos
-    ├── analises                <- Análises feitas (notebooks de python)
-    |   └── plots               <- Gráficos auxiliares produzidos durante a análise
-    ├── scripts                 <- Rotinas auxiliares
-    ├── resultados              <- Resultados finais
-    |   └── plots               <- Gráficos finais
-    └── docs                    <- Documentos e registros
+	├── LICENSE                 <- The license for this work
+    ├── requirements.txt        <- Python packages required to run everything
+	├── min_requirements.txt    <- Python packages required by brass.py
+	├── brass.py                <- A Python module that implements BRASS as a class
+    ├── data                    <- Where data would be stored
+    ├── analysis                <- Analysis made for the paper
+    |   └── plots               <- Where plots would be saved
+    └── examples                <- Jupyter notebooks showing how to use BRASS
     
 
-## Seção
+## Installation
 
-_Conteúdo_
+The Python packages required to run BRASS and all the analysis done in the paper are specified in `requirements.txt`. If you just want to use the 
+[BRASS module](brass.py), you can run the following command:
 
-## Contato
+      pip install -r min_requirements.txt
 
-Este projeto foi produzido por [Henrique S. Xavier](http://henriquexavier.net) (<https://github.com/hsxavier>).
+Then, just copy the `brass.py` file to a local folder where it can be found.
+
+
+## Citing this work
+
+If you use the data or the code in this repository, please cite:
+
+@unpublished{Xavier2023,
+  author = "Henrique S. Xavier and Diogo Cortiz and Mateus Silvestrin and Ana Lu\'isa Freitas and Let\'icia Yumi Nakao Morello and Fernanda Naomi Pantale\~ao and Gabriel Gaudencio do R\\\^ego",
+  title  = "Applying a new category association estimator to sentiment analysis on the Web",
+  archivePrefix = {arXiv},
+  eprint = {2311.05330},
+  primaryClass = {stat.AP},
+  month  = "11",
+  year   = "2023"
+}
+
+
+## Contact
+
+For more information, contact [Henrique S. Xavier](http://henriquexavier.net) (<https://github.com/hsxavier>).
