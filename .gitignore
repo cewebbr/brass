@@ -13,6 +13,7 @@ data/sim_chains/*
 .ipynb_checkpoints
 analysis/.ipynb_checkpoints
 analysis/__pycache__
+__pycache__
 
 # Links:
 data/chains
