@@ -7,15 +7,15 @@ where it was applied to annotations of emotions identified on tweets in Portugue
 ## Structure of the project:
 
     .
-    ├── README.md               <- This document
-	├── LICENSE                 <- The license for this work
-    ├── requirements.txt        <- Python packages required to run everything
-	├── min_requirements.txt    <- Python packages required by brass.py
-	├── brass.py                <- A Python module that implements BRASS as a class
-    ├── data                    <- Where data would be stored
     ├── analysis                <- Analysis made for the paper
+    ├── data                    <- Where data would be stored
     |   └── plots               <- Where plots would be saved
-    └── examples                <- Jupyter notebooks showing how to use BRASS
+    ├── examples                <- Jupyter notebooks showing how to use BRASS
+	├── LICENSE                 <- The license for this work
+    ├── README.md               <- This document
+	├── brass.py                <- A Python module that implements BRASS as a class
+	├── min_requirements.txt    <- Python packages required by brass.py
+    └── requirements.txt        <- Python packages required to run everything
     
 
 ## Installation
