@@ -1,7 +1,7 @@
 # BRASS - Categorical variable association estimator
 
 BRASS is a Bayesian method for estimating the degree of association between categorical variables. It is described in the paper 
-"_Applying a new category association estimator to sentiment analysis on the Web_" ([Xavier et al. (2023)](https://arxiv.org/abs/2311.05330)),
+"_Applying a new category association estimator to sentiment analysis on the Web_" ([Xavier et al., 2023](https://arxiv.org/abs/2311.05330)),
 where it was applied to annotations of emotions identified on tweets in Portuguese.
 
 ## Structure of the project:
@@ -34,7 +34,7 @@ Then, just copy the `brass.py` file to a local folder where it can be found.
 
 ## Association between emotions
 
-The analysis presented in the [paper](https://arxiv.org/abs/2311.05330), that tests the method on synthetic data and applies to emotions detected on tweets in portuguese, 
+The analysis presented in the [paper](https://arxiv.org/abs/2311.05330), that tests the method on synthetic data and applies it to emotions detected on tweets in portuguese, 
 is available in the [./analysis](./analysis) folder. 
 
 The data resulting from the complete annotation process of 4,613 tweets is available at [./data/processed](./data/processed). This is the data used in the analysis presented 
