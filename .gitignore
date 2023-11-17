@@ -9,6 +9,7 @@ analysis/plots/*
 data/sim_chains/*
 !data/sim_chains/.gitignore
 
+
 # Trash:
 .ipynb_checkpoints
 analysis/.ipynb_checkpoints
@@ -16,5 +17,6 @@ analysis/__pycache__
 __pycache__
 
 # Links:
-data/chains
-data/cleaned
+data/chains/moral
+data/chains/cross
+data/chains/emo
