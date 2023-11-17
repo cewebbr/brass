@@ -1,0 +1,23 @@
+data_column;meaning
+_input_hash;Unique instance identifier associated to the text.
+_task_hash;Unique instance identifier associated to something else. 
+tweet_id;Tweet ID, given by the platform.
+text;The textual content of the tweet.
+opt_LIBERDADE_4;Whether the moral category LIBERDADE was available as an option for annotator 4 (it was added after the annotation process had begun).
+opt_OPRESSAO_4;Whether the moral category OPRESSAO was available as an option for annotator 4 (it was added after the annotation process had begun).
+opt_LIBERDADE_5;Whether the moral category LIBERDADE was available as an option for annotator 5 (it was added after the annotation process had begun).
+opt_OPRESSAO_5;Whether the moral category OPRESSAO was available as an option for annotator 5 (it was added after the annotation process had begun).
+opt_LIBERDADE_6;Whether the moral category LIBERDADE was available as an option for annotator 6 (it was added after the annotation process had begun).
+opt_OPRESSAO_6;Whether the moral category OPRESSAO was available as an option for annotator 6 (it was added after the annotation process had begun).
+annotated_1;Whether the tweet was annotated by annotator 1 (in charge of identifying emotions from a predefined set).
+annotated_2;Whether the tweet was annotated by annotator 2 (in charge of identifying emotions from a predefined set).
+annotated_3;Whether the tweet was annotated by annotator 3 (in charge of identifying emotions from a predefined set).
+annotated_4;Whether the tweet was annotated by annotator 4 (in charge of identifying moral categories from a predefined set).
+annotated_5;Whether the tweet was annotated by annotator 5 (in charge of identifying moral categories from a predefined set).
+annotated_6;Whether the tweet was annotated by annotator 6 (in charge of identifying moral categories from a predefined set).
+n_opt;How many extra moral category options (columns opt_XXXXXX_i) were available for annotating this tweet. 
+annot_complete;Whether or not the tweet was annotated by all annotators.
+ABORRECIMENTO;Last emotion category column. It informs if the respective emotion was detected in the tweet by at least two annotators.
+VERGONHA;Last emotion category column. It informs if the respective emotion was detected in the tweet by at least two annotators.
+AUTORIDADE;First moral category column. It informs if the respective moral category was detected in the tweet by at least two annotators.
+PUREZA;Last moral category column. It informs if the respective moral category was detected in the tweet by at least two annotators.
