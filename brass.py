@@ -177,8 +177,10 @@ class AssocEstimator:
         return out_alpha
     
 
-    def _create_multinomial_model(self, pair_counts, prior_alpha, prior_name='pair_probs'):
+    def _old_create_multinomial_model(self, pair_counts, prior_alpha, prior_name='pair_probs'):
         """
+        Deprecated due to poor performance.
+
         Create a pymc Bayesian model for the counts, assuming the `counts`
         come from a Multinomial distribution whose probabilities are 
         extracted from a Dirichlet prior.
@@ -219,8 +221,46 @@ class AssocEstimator:
             gen_counts = pm.Multinomial('gen_counts', n=total_counts, p=pair_probs, shape=obs_counts.shape, observed=obs_counts)
         
         return model
-        
 
+    
+    def _create_multinomial_model(self, pair_counts, prior_alpha, prior_name='pair_probs'):
+        """
+        Create a pymc Bayesian model for the counts, assuming the `counts`
+        come from a Multinomial distribution whose probabilities are 
+        extracted from a Dirichlet prior. Use an updated Dirichlet distribution 
+        according to the counts (conjugate prior property) as model.
+    
+        Parameters
+        ----------
+        pair_counts : array, shape (k,)
+            Observed counts for k possible categories. Currently, k must be 4 
+            since a pair of binary variables can have the values: (0,0), (0,1), 
+            (1,0), (1,1).
+        prior_alpha : array, shape (k,)
+            Parameter alpha for the Dirichlet distribution, used as prior. It 
+            must be an array of 4 positive values, each associated to the 
+            probability of the results (0,0), (0,1), (1,0), (1,1), respectively.
+            `alpha = [1, 1, 1, 1]` correponds to an uniform distribution subject 
+            to the total probability constraint.
+        prior_name : str
+            How to call the vector of probabilities that will be sampled by the 
+            MCMC chain.
+    
+        Returns
+        -------
+        model : pymc.Model
+            The model.
+        """
+    
+        # Create model:
+        with pm.Model() as model:
+            
+            # Dirichlet distribution updated by the data:
+            pair_probs = pm.Dirichlet(prior_name, prior_alpha + pair_counts)
+                    
+        return model
+
+    
     def _run_mcmc(self, model, n_draws=1000, n_chains=4, n_tune=1000, seed=None, discard_tuned_samples=True, progressbar=True):
         """
         Run an MCMC on the specified model.
